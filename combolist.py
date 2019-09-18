@@ -38,7 +38,10 @@ def push_letter(combo, wheel, letter):
 	for next_wheel_position in wheels[wheel+1]:
 		push_letter(combo, wheel+1, next_wheel_position)
 
-combo = ['a','a','a','a']
+combo = []
+for wheel in wheels:
+	combo.append('*')
+
 for letter in wheels[0]:
 	push_letter(combo, 0, letter)
 
